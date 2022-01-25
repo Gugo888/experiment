@@ -1,0 +1,8 @@
+<input class="input" #PersonName>
+<button (click)="add(PersonName)">click</button>
+
+<div *ngFor="let user of users; index as i;">
+  <h1 class="h1" *ngIf="user.visible">{{user.name}}</h1>
+  <button *ngIf="users.length > 1" class="button" (click)="delete(i)">delete</button>
+  <button (click)="hide(user)">hide</button>
+</div>
