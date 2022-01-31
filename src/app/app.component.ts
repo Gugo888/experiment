@@ -5,7 +5,7 @@ type User = {name:string, visible:boolean}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 
 export class AppComponent {
@@ -32,4 +32,19 @@ export class AppComponent {
   hide(param:User) {
     param.visible = param.visible === true ? false:true
   }
+
+
+  persons: string[] = ['Gugo', 'Rafo', 'Gnel', 'Rob', 'Gayan', 'Razmik', 'Saqo', 'Samo', 'Saro']
+  filteredPersons: string[] = this.persons;
+
+  filter(input: any): void {
+    this.filteredPersons = this.persons.filter(pers => pers.startsWith(input.value))
+  }
+  
 }
+
+
+
+
+
+

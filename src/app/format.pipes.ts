@@ -1,17 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
   
 @Pipe({
-    name: 'format'
+    name: 'format',
 })
 export class FormatPipe implements PipeTransform {
+  
+  transform(value: string, args:number = 10, args2:string = '...'): string {
 
-   
-  transform(value: string, args?: any): string {
-     if(value.length > 10) {
-        value = value.slice(0,10);
-        return value + '...'
-     }
-    return value 
+    console.log('pipe invoked');
+    return value.slice(0,args) + args2;
   }
   
 }

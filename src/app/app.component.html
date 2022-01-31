@@ -1,8 +1,42 @@
-<input class="input" #PersonName>
+<!-- <input class="input" #PersonName>
 <button (click)="add(PersonName)">click</button>
 
 <div *ngFor="let user of users; index as i;">
   <h1 title="Name" class="h1" *ngIf="user.visible">{{user.name | format}}</h1>
   <button *ngIf="users.length > 1" class="button" (click)="delete(i)">delete</button>
   <button (click)="hide(user)">hide</button>
-</div>
+</div> -->
+
+
+<input (input)="filter($event.target)">
+<h1 *ngFor="let item of filteredPersons">{{item}}</h1>
+
+
+
+
+
+
+
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+
